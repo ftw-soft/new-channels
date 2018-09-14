@@ -7,7 +7,6 @@
 
 namespace FtwSoft\NotificationChannels\Intercom\Tests\Mocks;
 
-
 use Illuminate\Contracts\Config\Repository;
 
 class TestConfigRepository implements Repository
@@ -75,5 +74,4 @@ class TestConfigRepository implements Repository
         unset($this->data[$key]);
         $this->data[$key] = $value;
     }
-
 }

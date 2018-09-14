@@ -2,11 +2,11 @@
 
 namespace FtwSoft\NotificationChannels\Intercom;
 
+use Intercom\IntercomClient;
 use Illuminate\Container\Container;
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\ServiceProvider;
-use Intercom\IntercomClient;
+use Illuminate\Support\Facades\Notification;
 
 class IntercomServiceProvider extends ServiceProvider
 {
