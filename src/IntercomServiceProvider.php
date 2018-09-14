@@ -2,7 +2,7 @@
 
 namespace FtwSoft\NotificationChannels\Intercom;
 
-use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Container\Container;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\ServiceProvider;
@@ -31,7 +31,7 @@ class IntercomServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        Notification::extend('intercom', function (Application $app) {
+        Notification::extend('intercom', function (Container $app) {
             return $app->make(IntercomChannel::class);
         });
     }

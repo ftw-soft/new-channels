@@ -79,4 +79,12 @@ class IntercomChannel
             throw new RequestException($exception);
         }
     }
+
+    /**
+     * @return \Intercom\IntercomClient
+     */
+    public function getClient(): IntercomClient
+    {
+        return $this->client;
+    }
 }
