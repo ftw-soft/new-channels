@@ -2,6 +2,7 @@
 
 namespace FtwSoft\NotificationChannels\Intercom\Tests\Mocks;
 
+use Closure;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Foundation\Application as ApplicationContract;
 
@@ -24,7 +25,7 @@ class TestFakeApplication extends Container implements ApplicationContract
     /**
      * {@inheritdoc}
      */
-    public function environment()
+    public function environment(...$environments)
     {
     }
 
@@ -102,6 +103,174 @@ class TestFakeApplication extends Container implements ApplicationContract
      * {@inheritdoc}
      */
     public function getCachedPackagesPath()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function bootstrapPath($path = '')
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function configPath($path = '')
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function databasePath($path = '')
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function environmentPath()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function resourcePath($path = '')
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function storagePath()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function resolveProvider($provider)
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function bootstrapWith(array $bootstrappers)
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function configurationIsCached()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function detectEnvironment(Closure $callback)
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function environmentFile()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function environmentFilePath()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getCachedConfigPath()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getCachedRoutesPath()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getLocale()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getNamespace()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getProviders($provider)
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function hasBeenBootstrapped()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function loadDeferredProviders()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function loadEnvironmentFrom($file)
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function routesAreCached()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setLocale($locale)
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function shouldSkipMiddleware()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function terminate()
     {
     }
 }

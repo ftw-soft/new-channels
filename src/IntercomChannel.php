@@ -5,6 +5,7 @@ namespace FtwSoft\NotificationChannels\Intercom;
 use Intercom\IntercomClient;
 use Illuminate\Notifications\Notification;
 use GuzzleHttp\Exception\BadResponseException;
+use Illuminate\Notifications\Events\NotificationFailed;
 use FtwSoft\NotificationChannels\Intercom\Exceptions\RequestException;
 use FtwSoft\NotificationChannels\Intercom\Contracts\IntercomNotification;
 use FtwSoft\NotificationChannels\Intercom\Exceptions\InvalidArgumentException;
@@ -76,6 +77,12 @@ class IntercomChannel
                 $message->toArray()
             );
         } catch (BadResponseException $exception) {
+            event(new NotificationFailed($notifiable, $notification, $this, [
+                    'message' => $message,
+                    'error' => $exception->getMessage()
+                ])
+            );
+
             throw new RequestException($exception, $exception->getMessage(), $exception->getCode());
         }
     }
