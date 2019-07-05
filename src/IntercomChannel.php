@@ -79,7 +79,7 @@ class IntercomChannel
         } catch (BadResponseException $exception) {
             event(new NotificationFailed($notifiable, $notification, $this, [
                     'message' => $message,
-                    'error' => $exception->getMessage()
+                    'error' => $exception->getMessage(),
                 ])
             );
 
