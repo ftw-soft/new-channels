@@ -10,6 +10,18 @@
 
 This package makes it easy to send notifications using [Intercom](https://app.intercom.com) with Laravel 5.6.
 
+## Abandoned
+
+Current project is abandoned now. Please use official release now from [laravel-notification-channels/intercom](https://github.com/laravel-notification-channels/intercom)
+
+### How to migrate?
+
+- Update your `composer.json`: change `"ftw-soft/intercom-notification-channel": "*"` to `"laravel-notification-channels/intercom": "^1.0"`
+- Run `$ composer update` within your project directory
+- Replace all references of `FtwSoft\NotificationChannels` to `NotificationChannels` accross all of your project 
+- ...
+- Profit!
+
 ## Contents
 
 - [Installation](#installation)
